@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/cemabengteng/start.cloud/issues"
   },
-  "homepage": "https://github.com/cemabengteng/start.cloud#readme"
+  "homepage": "https://github.com/cemabengteng/start.cloud#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
 }
