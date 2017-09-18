@@ -14,12 +14,15 @@ const history = syncHistoryWithStore(browserHistory, store)
 import { CommonContainer, CommonReducer } from "./common";
 
 render(
-    <Provider store={store}>
-        <Router history={history}>
-            <Route path="/" component={CommonContainer}>
-            </Route>
-        </Router>
-    </Provider>
+    // <Provider store={store}>
+    //     <Router history={history}>
+    //         <Route path="/" component={CommonContainer}>
+    //         </Route>
+    //     </Router>
+    // </Provider>
+    <div>
+        <h1>hello man!!</h1>
+    </div>
     ,
     document.getElementById("app")
 );
@@ -35,6 +38,6 @@ function _createStore() {
 
 function createReducer() {
     return combineReducers({
-        common: CommonReducer
+        // common: CommonReducer
     });
 }

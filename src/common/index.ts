@@ -4,10 +4,8 @@ import { AppContainer, AppReducer } from "./app";
 
 function reducer(state: StoreState, action: any): StoreState {
     return {
-        isShow: state.isShow,
-        getIsShow: action.isShow(),
-        test: AppReducer(state, action)
-    }
+        isShow: AppReducer(state, action).isShow
+    };
 }
 
 export {

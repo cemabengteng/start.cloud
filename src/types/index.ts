@@ -6,4 +6,4 @@ interface AppStoreState {
 }
 
 
-export { AppStoreState, CommonStoreState };
+export { AppStoreState };

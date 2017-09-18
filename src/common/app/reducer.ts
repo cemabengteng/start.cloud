@@ -5,21 +5,18 @@ import { ActionType } from "./action";
 // 默认的
 const defaultStoreState: StoreState = {
     isShow: false,
-    getIsShow: () => { return false }
 }
 
 export default function reducer(state: StoreState = defaultStoreState, action: ActionType): StoreState {
     const tmp = {
+        state,
         isShow: state.isShow,
-        getIsShow: () => { return false }
     }
     switch (action.type) {
         case "1":
-            break;
+            return tmp;        
         default:
-            break;
+            return state;
     }
-
-    return tmp;
 }
 
