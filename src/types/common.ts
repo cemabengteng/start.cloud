@@ -6,4 +6,8 @@ export interface CommonAppStoreState {
 }
 
 
-export interface CommonStoreState extends CommonAppStoreState { }
+export interface testStoreState {
+    test?: any;
+}
+
+export interface CommonStoreState extends CommonAppStoreState, testStoreState { }

@@ -5,7 +5,7 @@ export interface Type1 {
 
 
 export interface Type2 {
-
+    type: string;
 }
 
 export function getIsShow(): Type1 {
