@@ -1,6 +1,7 @@
 import * as React from "react";
 import { render } from "react-dom";
-import { Router, browserHistory } from "react-router";
+import { Router, browserHistory, Route } from "react-router";
+import { Provider } from "react-redux";
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { syncHistoryWithStore } from "react-router-redux";
 import ReduxThunk from "redux-thunk";
@@ -13,10 +14,13 @@ const history = syncHistoryWithStore(browserHistory, store)
 import { CommonContainer, CommonReducer } from "./common";
 
 render(
-    <Router history={history}>
-        <Router path="/" component={}>
+    <Provider store={store}>
+        <Router history={history}>
+            <Route path="/" component={CommonContainer}>
+            </Route>
         </Router>
-    </Router>,
+    </Provider>
+    ,
     document.getElementById("app")
 );
 
@@ -31,6 +35,6 @@ function _createStore() {
 
 function createReducer() {
     return combineReducers({
-
+        common: CommonReducer
     });
 }

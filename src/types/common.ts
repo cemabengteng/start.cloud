@@ -1,8 +1,9 @@
 
 // StoreState
 export interface CommonAppStoreState {
-
+    isShow: boolean;
+    getIsShow: () => void;
 }
 
 
-export interface CommonStoreState extends CommonAppStoreState {}
+export interface CommonStoreState extends CommonAppStoreState { }
