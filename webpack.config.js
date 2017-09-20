@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const errorOverlayMiddleware = require('react-dev-utils/errorOverlayMiddleware');
 
 module.exports = {
     entry: './src/index.tsx',
@@ -15,6 +16,11 @@ module.exports = {
             { test: /\.tsx?$/, use: 'awesome-typescript-loader' }
         ]
     },
+
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".json"]
+    },
+
 
     plugins: [
         new HtmlWebpackPlugin({

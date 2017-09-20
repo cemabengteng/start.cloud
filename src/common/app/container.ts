@@ -16,4 +16,4 @@ function mapDispatchtoProps(dispatch: Dispatch<ActionType>) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchtoProps)(Appcomponent);
+export default connect(null, {})(Appcomponent);

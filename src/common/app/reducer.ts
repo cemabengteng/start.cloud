@@ -9,8 +9,7 @@ const defaultStoreState: StoreState = {
 
 export default function reducer(state: StoreState = defaultStoreState, action: ActionType): StoreState {
     const tmp = {
-        state,
-        isShow: state.isShow,
+        isShow: state.isShow
     }
     switch (action.type) {
         case "1":
