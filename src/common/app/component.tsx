@@ -12,7 +12,10 @@ export default class Component extends React.Component<ComponentProps, any>{
     render() {
         return (
             <div>
-                <h1>hello man i am app Component!!</h1>
+                <h3>hello man i am app Component!!</h3>
+                <div>
+                    {this.props.children}
+                </div>
             </div>
         );
     }

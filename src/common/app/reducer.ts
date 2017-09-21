@@ -8,17 +8,15 @@ const defaultStoreState: StoreState = {
 }
 
 export default function reducer(state: StoreState = defaultStoreState, action: ActionType): StoreState {
-    // const tmp = {
-    //     ...state,
-    //     isShow: false
-    // }
-    // switch (action.type) {
-    //     case "1":
-    //         return tmp;        
-    //     default:
-    //         return state;
-    // }
-
-    return state;
+    const tmp = {
+        ...state,
+        isShow: false
+    }
+    switch (action.type) {
+        case "1":
+            return tmp;        
+        default:
+            return state;
+    }
 }
 

@@ -25,7 +25,7 @@ module.exports = {
 
     plugins: [
         new CheckerPlugin(),
-        
+
         new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }),
 
         new webpack.optimize.ModuleConcatenationPlugin(),
@@ -34,5 +34,9 @@ module.exports = {
             template: path.resolve(__dirname, 'public/index.html')
             // favicon: path.resolve(__dirname, 'public/favicon.ico')
         }),
-    ]
+    ],
+
+    devServer: {
+        historyApiFallback: true
+    },
 }
